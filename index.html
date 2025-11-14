@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>SiteGuard - Website Monitoring</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,11 +14,11 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #007bff; /* Blue theme */
+            --secondary: #0056b3;
+            --accent: #28a745; /* Green for uptime */
+            --light: #f8f9fa;
+            --dark: #003366;
             --text: #333333;
             --white: #ffffff;
         }
@@ -101,7 +101,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1547658718-d75265506ae2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTB8fHdlYnNpdGUlMjBtb25pdG9yaW5nfGVufDB8fHx8MTcwMTU3MDQ0N3ww&ixlib=rb-4.0.3&q=80&w=1080');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -252,17 +252,17 @@
             color: var(--text);
         }
 
-        .initiatives {
+        .services {
             background-color: var(--white);
         }
 
-        .initiatives-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .initiative-card {
+        .service-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
@@ -270,37 +270,31 @@
             transition: transform 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
         }
 
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
+        .service-icon {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--primary);
+            color: var(--white);
+            font-size: 3rem;
         }
 
-        .initiative-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
-        }
-
-        .initiative-content {
+        .service-content {
             padding: 1.5rem;
         }
 
-        .initiative-content h3 {
+        .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .service-content p {
             margin-bottom: 1.5rem;
         }
 
@@ -427,7 +421,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
+            .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -475,7 +469,7 @@
                 display: block;
             }
             
-            .initiatives-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -499,8 +493,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-server"></i> <!-- Server icon -->
+                <span>SiteGuard</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -508,9 +502,9 @@
                 </div>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -520,9 +514,9 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>24/7 Website Monitoring to Keep Your Business Online</h1>
+            <p>Real-time monitoring of website performance, availability, and security. Detect and resolve issues immediately.</p>
+            <a href="#pricing" class="btn">Choose Your Monitoring Plan</a>
         </div>
     </section>
 
@@ -530,82 +524,112 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>About SiteGuard</h2>
+                <p>We provide advanced website monitoring solutions to ensure your online presence is always up and running.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1542744095-291d1f67b221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8d2Vic2l0ZSUyMG1vbml0b3Jpbmd8ZW58MHx8fHwxNzAxNTcwNDQ3fDA&ixlib=rb-4.0.3&q=80&w=1080" alt="Monitoring Dashboard">
                 </div>
                 <div class="about-text">
                     <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
+                    <p>SiteGuard is dedicated to empowering businesses with reliable website monitoring, proactive alerts, and insightful analytics to maintain optimal online performance and user experience.</p>
+                    <p>Founded in 2015, we have grown to protect thousands of websites worldwide, from small businesses to large enterprises.</p>
+                    <p>Our comprehensive approach combines cutting-edge technology with expert support to safeguard your digital assets around the clock.</p>
                     <a href="#" class="btn">Learn More</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+                    <i class="fas fa-globe"></i>
+                    <h3 class="counter" data-target="15000">0</h3>
+                    <p>Websites Monitored</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <i class="fas fa-chart-line"></i>
+                    <h3 class="counter" data-target="99.99">0</h3>
+                    <p>Average Uptime (%)</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-bell"></i>
+                    <h3 class="counter" data-target="500000">0</h3>
+                    <p>Alerts Sent</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-headset"></i>
+                    <h3 class="counter" data-target="24">0</h3>
+                    <p>24/7 Support Hours</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Monitoring Services</h2>
+                <p>Comprehensive solutions to keep your website performing at its best.</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="service-content">
+                        <h3>Uptime Monitoring</h3>
+                        <p>Receive instant alerts if your website goes down, ensuring minimal downtime and business continuity.</p>
+                        <a href="#" class="btn">Details</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
+                    <div class="service-content">
+                        <h3>Performance Monitoring</h3>
+                        <p>Track load times, page speed, and other key metrics to optimize user experience and SEO.</p>
+                        <a href="#" class="btn">Details</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Security Monitoring</h3>
+                        <p>Protect your website from threats with continuous scans for malware, vulnerabilities, and blacklisting.</p>
+                        <a href="#" class="btn">Details</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Global Check Locations</h3>
+                        <p>Monitor your website from multiple locations worldwide to ensure availability for all your users.</p>
+                        <a href="#" class="btn">Details</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Customizable Alerts</h3>
+                        <p>Configure alerts via email, SMS, Slack, or webhooks for critical incidents and performance degradation.</p>
+                        <a href="#" class="btn">Details</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Detailed Reporting</h3>
+                        <p>Access comprehensive reports and analytics to understand your website's performance trends over time.</p>
+                        <a href="#" class="btn">Details</a>
                     </div>
                 </div>
             </div>
@@ -613,11 +637,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <section class="cta" id="pricing">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Ready to Secure Your Website's Uptime?</h2>
+            <p>Choose the perfect monitoring plan for your needs and join thousands of satisfied customers.</p>
+            <a href="#" class="btn">View Pricing Plans</a>
         </div>
     </section>
 
@@ -626,8 +650,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>SiteGuard</h3>
+                    <p>Your trusted partner for robust website monitoring and peace of mind.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -640,30 +664,30 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Uptime Monitoring</a></li>
+                        <li><a href="#">Performance Monitoring</a></li>
+                        <li><a href="#">Security Monitoring</a></li>
+                        <li><a href="#">SSL Monitoring</a></li>
+                        <li><a href="#">Domain Monitoring</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Monitor Lane, Tech City, TX 78701</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> support@siteguard.com</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 SiteGuard. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -681,12 +705,16 @@
             
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
+                let count = parseFloat(counter.innerText); // Use parseFloat for decimal numbers
+
                 const inc = target / speed;
                 
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
+                if (count < target) {
+                    if (target === 99.99) { // Special handling for percentage
+                        counter.innerText = (count + inc).toFixed(2);
+                    } else {
+                        counter.innerText = Math.ceil(count + inc);
+                    }
                     setTimeout(animateCounters, 1);
                 } else {
                     counter.innerText = target;
@@ -718,5 +746,4 @@
         });
     </script>
 </body>
-
 </html>
